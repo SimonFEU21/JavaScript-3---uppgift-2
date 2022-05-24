@@ -1,0 +1,10 @@
+{
+    "events": [
+        {
+            "title": "Event 1",
+            "description": "Random event",
+            "timestamp": 1653394774114,
+            "id": "asdas"
+        }
+    ]
+}

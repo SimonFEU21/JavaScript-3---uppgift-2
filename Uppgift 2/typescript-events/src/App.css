@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    padding-inline: 1rem;
+    max-width: 900px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: .4em 1em;
+    border-radius: 100vh;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-clear {
+    font-weight: bold;
+    font-size: 1rem;
+}
