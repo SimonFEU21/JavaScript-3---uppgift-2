@@ -1,15 +1,23 @@
-import React, { FC, useState } from 'react'
-import axios from 'axios'
+import { FC } from 'react'
 import IEvent from '../models/IEvent'
+import EventCard from '../components/Events/EventCard'
 
-const EventsView:FC = () => {
 
-const [url] = useState <string> ('http://localhost:8080/events')
 
-const [events, setEvents = useState<IEvent[]>([])
+type props = {
+  events: IEvent[]
+}
+
+const EventsView:FC<props> = ({events}) => {
+
 
   return (
-    <div></div>
+    <div className='events-view'>
+      {!events.length && <p>No events to show</p>}
+      { events.map(evt => (
+        <EventCard evt={evt} key={evt.id} />
+      )) }
+    </div>
   )
 }
 
