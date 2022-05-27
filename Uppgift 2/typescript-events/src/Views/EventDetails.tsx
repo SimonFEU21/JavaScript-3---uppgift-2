@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import IEvent from '../models/IEvent'
 
+
+
 const EventDetails:FC = () => {
 
   const { id } = useParams()

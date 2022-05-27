@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import './Navbar.css'
 
+
+
 type NavProps = {
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }

@@ -1,16 +1,10 @@
 {
   "events": [
     {
-      "title": "Event 1",
-      "description": "Random event",
+      "title": "Test",
+      "description": "Testar så att det fungerar",
       "timestamp": 1653394774114,
-      "id": "asdas"
-    },
-    {
-      "title": "",
-      "description": "",
-      "timestamp": null,
-      "id": "C4_xZK9"
+      "id": "1"
     }
-  ]
+ ]
 }

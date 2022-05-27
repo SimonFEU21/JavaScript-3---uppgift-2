@@ -8,6 +8,8 @@ import Navbar from './components/Navbar/Navbar';
 import EventDetails from './Views/EventDetails';
 import EventsView from './Views/EventsView';
 
+
+
 const App:React.FC = () => {
 
   const [showModal, setShowModal] = React.useState(false)
@@ -26,6 +28,7 @@ const App:React.FC = () => {
     }
   }
 
+
   const getEvents = useCallback(
     async () => {
       const { data, status } = await axios.get<IEvent[]>(url)
@@ -40,6 +43,7 @@ const App:React.FC = () => {
     getEvents()
   }, [getEvents])
 
+  
   return (
     <div className="App">
       <Navbar setShowModal={setShowModal} />
