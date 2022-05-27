@@ -6,7 +6,6 @@ import moment from 'moment'
 import 'moment/locale/sv'
 
 
-
 interface EvtProps {
   evt: IEvent
 }

@@ -28,7 +28,6 @@ const App:React.FC = () => {
     }
   }
 
-
   const getEvents = useCallback(
     async () => {
       const { data, status } = await axios.get<IEvent[]>(url)
@@ -43,7 +42,6 @@ const App:React.FC = () => {
     getEvents()
   }, [getEvents])
 
-  
   return (
     <div className="App">
       <Navbar setShowModal={setShowModal} />

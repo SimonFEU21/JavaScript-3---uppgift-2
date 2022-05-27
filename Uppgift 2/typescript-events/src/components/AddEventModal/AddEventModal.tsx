@@ -82,7 +82,7 @@ const AddEventModal:FC<props> = ({ closeModal, addEvent }) => {
           <div className='d-flex'>
             <button className='btn btn-outline ml-auto'>Add Event</button>
           </div>
-      {!verification && <p>You must fill out everything!</p>}
+         <div className='err-msg'>{!verification &&  <p>You must fill out everything!</p>} </div> 
         </form>
       </div>
     </div>
