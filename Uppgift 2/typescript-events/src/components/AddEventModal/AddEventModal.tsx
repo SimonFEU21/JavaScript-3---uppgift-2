@@ -10,37 +10,30 @@ type props = {
 
 
 
+// Validering
+
 const AddEventModal:FC<props> = ({ closeModal, addEvent }) => {
 
-  
-  const [title, setTitle] = useState('')
-  const [timeStamp, setTimeStamp] = useState('')
-  const [description, setDescription] = useState('')  
+
   const [verification, setVerification] = useState(true)
   
-  
+
   const handleSubmit:React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()
-    if(title.length === 0 || timeStamp.length) {
+    if(formData.title === '' || time === '') {
       setVerification(false);
+      console.log('error');
       return
     } else {
       setVerification(true)
     }
-
     
     const event:IEvent = {...formData, timestamp: Date.parse(time)}
     
     addEvent(event)
     
-    
-    
-    
   }
     
-  
-
-  
 
   const [formData, setFormData] = useState<IEvent> ({
     title: '',
@@ -89,7 +82,7 @@ const AddEventModal:FC<props> = ({ closeModal, addEvent }) => {
           <div className='d-flex'>
             <button className='btn btn-outline ml-auto'>Add Event</button>
           </div>
-      {!verification && <p>Title, Date and Time can not be empty!</p>}
+      {!verification && <p>You must fill out everything!</p>}
         </form>
       </div>
     </div>
